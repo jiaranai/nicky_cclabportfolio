@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nicky Fuganjananon | Code Portfolio</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- navigation menu -->
+    <div class="nav">
+      <h1>Nicky Fuganjananon</h1>
+        <ul>
+         <li>Project <a href="p1.html">#1 Lost & Found</a></li>
+        <li>Project <a href="p2.html">#2 Face Generator</a></li>
+        <li>Project <a href="p3.html">#3 Experimental Clock</a></li>
+        <li>Project <a href="p4.html">#4 Exquisite Corpse</a></li>
+        <li>Project <a href="p5.html">#5 Optical Illusion</a></li>
+        <li>Project <a href="p6.html">#6 Data Portrait</a></li>
+        <li>Project <a href="p7.html">#7 Autobiographical Game</a></li>
+        <li>Project <a href="p8.html">#8 Experimental Camera</a></li>
+        <li>Project <a href="p9.html">#9 Consentful Interface</a></li>
+      </ul>
+    </div>
+
+    <!-- main content -->
+   <div class="content">
+      <h1>
+        Data Portrait: Mood, Coffee, and Homework
+      </h1>
+
+      <!-- 2. embed your p5 sketch -->
+
+      <div class="fullwidth">
+        <!-- below width and height refers to the dimensions of your sketch-->
+
+        <iframe
+          width="600px"
+          height="600px"
+          src="https://preview.p5js.org/NickyF/embed/_gIpmEQNu"
+  
+        ></iframe>
+        
+       
+      </div>
+         <li> <a href="https://editor.p5js.org/NickyF/sketches/_gIpmEQNu" style="color:#3371FF;"> Link to Code </a></li>
+      <!-- 3. write a short description to describe what the work is about -->
+      <div>
+        
+        <h1>
+          How To Read The Data:
+        </h1>
+        <p>
+          On the top most panel, you can see my self-illustrated images of my mood and the weather forecast for the day.
+          There are four moods that I've recorded: happy, sad, tired, and anxious. During the seven day period, there was
+          only two types of weather: gloomy and sunny. 
+        </p>
+        <p>
+          On the chart below the top panel, the brown dot displayed is the amount of coffee I've drank during the day. 
+          The orange dot is the amount of time I spent on homework. The data is separated into 3 parts of the day: morning,
+          noon, and evening. 
+          </p>
+        <div class="fullwidth">
+          
+
+          <br> <img src="https://drive.google.com/uc?export=view&id=1821XrKJXUsOhqxdhQVI0pLln1VXHXGqW " > 
+          <img src="https://drive.google.com/uc?export=view&id=1YQImcd3OXZKudnmfBv9W0eCnqvhk1JQt">
+        </div>
+       
+        <br>
+        <h2>
+          Data That Was Tracked:
+        </h2>
+        <p>
+          Ever since I came back to school, my mood has been very irratic. I am still slowly adjusting to the life of a full-time student
+          and wanted to see if there's a correlation between my caffiene consumption, mood, and weather. I usually drink only a cup
+          of coffee in the morning to start my day, but I have noticed that I've been drinking more of it lately. 
+        </p>
+        <br> <b>Pattern I've Noticed:</b>
+        <p>
+          On gloomy days, it seems that my mood is more towards the negative side (sad/anxious/tired). I've also noticed that
+          I spend a lot of time doing homework each day. On the otherhand, it seems like my caffiene consumption is pretty
+          consistent, about two cups a day. 
+     </div>
+        </p>
+         <h1>
+        Assignment Prompt
+      </h1>
+      <p>
+         For Assignment 6, you will spend a week tracking a personal habit of yours to create a data-self portrait. 
+         Choose the personal habit mindfully — you will need to collect 20 ~ 50 data points for this assignment. 
+         Record the data onto a numbered list everytime it happens, and translate the list into array in p5.js. 
+         Animate your data self-portrait using any of the programming concepts you’ve learned in this class. 
+         Include an instruction on your CC portfolio to teach your audience how to read your data self-portrait.
+         <li> <a href="https://parsonsdt.github.io/critical-computation-2021/assignment/6.html" style="color:#3371FF;"> Assingment Link</a></li>
+      </p>
+      <h2>
+        Coding Process & Takeaways 
+      </h2>
+      <div class="fullwidth">
+        <img src="https://drive.google.com/uc?export=view&id=1D7HVERIJajVUYK6G0C3Y_-8VzsBh0o5E">
+        
+      </div>
+      <br>
+      <div>
+      <p>
+        <br> I decided to collect data on my caffeine consumption, mood, weather, and amount of homework in hopes to see how each factor
+        affects my mood. As seen above, I collected data for seven days and noticed that I'm happy 1 day out of 7, which is such a sad
+        realization. This project allowed me to reflect on my personal well-being and it helped motivate me to take
+        better care of my mental state. I used to be happy all the time and my body was better at taking on stress. I reflected further and
+        observed that my food intake is not as healthy either. This may have attributed to why I'm always tired and anxious. 
+        </p>
+      <p>
+      <div>
+        <img src="https://drive.google.com/uc?export=view&id=1iP8MFvSy0aFhChjZFYOHyc6AoqmZDqyw">
+      </div>
+      <br>
+      <br> The most challenging part of my design was translating my chart idea into code. I made sure to write out the numbers on the 
+        array and convert it into index # before I started coding so I am not confused later on. The animation was difficult to figure out
+        as I wanted my highlight bar to slide down vertically so that viewers understand that all the data seen is from one day.
+        Everytime my highlight bar moves down to a new date, I wanted my face and the weather icons to change accordingly. I thought that it was a great way
+        to represent my overall mood of the day. After trying out different things, I learned that it was the easiest to time the
+        highlights by seconds and utilize the second() function. During this process, I had to use a lot of if statements to parse the data from the array. Overall,
+        this project took about 12 hours of coding and testing and I'm proud of what I've made.
+      </p>
+      <br> <b>What was gained or loss through the process of data visualization?</b>
+      <p>
+        Data visualization allows creators to represent thier collected data in a meaningful way. There's a big opportunity for creators
+        to create a fun, but educational design. However, the data visualization design will influence how one intrepret the data. I've realized
+        that although my data visualization looked pretty good, it was really hard to intrepret without the keys. So, the next time I have
+        to create a data visualization, I'll make sure to test it out with others to learn whether they understand my chart without the keys or not.
+      </p>
+      
+     </div>

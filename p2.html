@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nicky Fuganjananon | Code 2 Portfolio</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- navigation menu -->
+    <div class="nav">
+      <h1>Nicky Fuganjananon</h1>
+      <h2>
+        Face Generator
+      </h2>
+        <ul>
+         <li>Project <a href="p1.html">#1 Lost & Found</a></li>
+        <li>Project <a href="p2.html">#2 Face Generator</a></li>
+        <li>Project <a href="p3.html">#3 Experimental Clock</a></li>
+        <li>Project <a href="p4.html">#4 Exquisite Corpse</a></li>
+        <li>Project <a href="p5.html">#5 Optical Illusion</a></li>
+        <li>Project <a href="p6.html">#6 Data Portrait</a></li>
+        <li>Project <a href="p7.html">#7 Autobiographical Game</a></li>
+        <li>Project <a href="p8.html">#8 Experimental Camera</a></li>
+        <li>Project <a href="p9.html">#9 Consentful Interface</a></li>
+      </ul>
+    </div>
+
+    <!-- main content -->
+    <div class="content">
+      <h1>
+        Face Generator
+      </h1>
+
+      <!-- 2. embed your p5 sketch -->
+
+      <div class="fullwidth">
+        <!-- below width and height refers to the dimensions of your sketch-->
+
+        <iframe
+          width="400px"
+          height="400px"
+          src="https://preview.p5js.org/NickyF/embed/iYKEHcsQD"
+        ></iframe>
+        
+       
+      </div>
+         <li> <a href="https://editor.p5js.org/NickyF/sketches/iYKEHcsQD" style="color:#3371FF;"> Link to Code </a></li>
+      <!-- 3. write a short description to describe what the work is about -->
+      <h1>
+        Prompt
+      </h1>
+      <p>
+          In parameterized design, you are a conductor rather than an individual musician. Instead of producing a single design where you have to draw out all the details step by step, you are using code to create a set of parameters that generate a variety of results. 
+      </p>
+      <p>
+         For Assignment 2, you will create a face generator using customized variables and the random() function. Plug the maximum / minimum values into the random() for each feature. The face generator will create multiple variations of the face through mouse or keyboard iteractions. Test, iterate, and refine the parameters by paying great attention to details. 
+      </p>
+      <li> <a href="https://parsonsdt.github.io/critical-computation-2021/assignment/2.html"style="color:#3371FF;">Source</a></li>
+      <h1>
+        Design Process
+      </h1>
+      <h2>
+        Drafting the Image
+      </h2>
+      <p>
+        I started the project by creating 2 face drawings (a large face and a small face) using Figma. This process made it 
+        easier for me to visualize what I am creating. 
+         <div class="fullwidth">
+           <img src="https://drive.google.com/uc?export=view&id=1b3n2gH_OSyi45TbHcD73u9oWM1Qz5l0H" />
+         </div>
+        <p>
+         <i>Big Face</i> 
+        </p>
+           <div class="fullwidth">
+           <img src="https://drive.google.com/uc?export=view&id=1Okph9l6KDCUZ-jH-XAnZdQcPjZtatcci" />
+           </div>
+        <p>
+          <i>Small Face</i>
+        </p>
+      <h2>
+        Translating Image into Code 
+      </h2>
+      <p>
+        The biggest challenge was to translate the image I drew into code. The question I had to answer was: how do I make sure that 
+        all the elements of the face (eyes, cheeks, mouth) stay within the face perimeter? To do that, I used basic algebra to create an equation
+        that will calculate the coordinates of the face's perimeter. 
+      </p>
+      <p>
+        First, I knew that I wanted my face to be a circle with the center coordinates of (200,200) with a diameter of 200. However, I wanted
+        to divide the circle into 4 parts to calculate the center coordinates for the eyes. So, I converted the diameter into radius. This way,
+        it was easier to divide the face into quarters. I imagined that the eye's center coordinates should be in the middle of the 
+        upper left quarter of the face. I found the x coordinate for the center of the eye by using the radius to find the edge of the face and added (radius/2). 
+        Then I calculated the y coordinate for the center of the eye using the same method. After plotting my findings into a graph,
+        I was able to understand how I should structure my code. The image below shows my calculation process.
+    
+      </p>
+  
+        <div class="fullwidth">
+           <img src="https://drive.google.com/uc?export=view&id=1oKZZUW26KpgC8E68hTMEs3XhsQxSb6og" />
+        </div>
+      </p>
+    
+      <p>
+        I realized that the radius should be the value that dictates how all the elements of the face should be structured. 
+        I did not want to create an extremely long draw function so <a href="https://javascript.info/function-basics">I researched how I can divide the face into different functions.</a>
+        Learning that I could execute a new function within the draw function changed how I structured my code completely. I decided to parse the face into
+        the followign functions: drawCheeks, drawMouth, and drawEye. Through trial and error, I was able to create each element of the face using the radius as an anchor point. 
+        I then tested ways to manipulate the face by multiplying or dividing the radius with different numbers. These numbers gave me the
+        acceptable parameters which could be used as the min and max values for the random() function. Lastly, I manipulated the colors of the face elements.
+        It was easy to generate different colors as I could just insert randomized variables into the fill() function.
+      
+      </p>
+          
+
+      <!-- 4. reflection -->
+      <h1>
+        Reflection
+      </h1>
+
+      <p>
+        When I initially created the drawing I thought it would be easy to randomize the different elements on the face while keeping it recognizable. 
+        However, I quickly realized that it was not true. I had to make sure that the pupils are in the middle of the cornea with the eye sparkles towards the rim
+        of the eye for the whole element to be recognized as an eye. If the pupils or the eye sparkles are too far away from the cornea, the eyes just look like
+        6 different circles. Moreover, if the both eyes are too high up, the face turns into a frog. On the otherhand, it was obvious that all elements of the mouth (teeth, mouth, tongue)
+        must be intact to be recognized as a mouth. However, I forgot to think about how the mouth should still be relatively big to complete the face. Through trial
+        and error, I was able to gauge the parameters for the random() function to generate an acceptable range of numbers that will not ruin the face. This project took me
+        10 hours to complete. It was a steep learning curve with many challenges.
+      </p>
+      <p>
+        Overall, I learned that as long as the eyes are recognizable, it will be obvious that the form is a face. I believe this relates to the
+        phenomenon called <b>pareidolia</b>, the human tendency to read into random or vague stimuli. This hyper facial perception is believed to 
+        stem from an evolutionary need to recognize faces. So, as long as there are forms that looks like eyes, nose, and lips, the human mind
+        should be able to trick us into thinking that it is a face. This is also how we can sometimes make out faces or animal forms just by looking at the clouds.
+      
+      </p>
+      
+      
+       <!-- 5. credits -->
+      <h1>
+        Credits
+      </h1>
+      
+      <p>
+        This project was created based on the <a href="https://parsonsdt.github.io/critical-computation-2021/assignment/2.html" style="color:#3371FF;">Critical Computation Assignment 2</a> 
+        Research material: <a href="https://www.theatlantic.com/technology/archive/2012/08/pareidolia-a-bizarre-bug-of-the-human-mind-emerges-in-computers/260760/">Pareidolia </a>
+      </p>
+      
+    
+    </div>
+  </body>
+</html>
